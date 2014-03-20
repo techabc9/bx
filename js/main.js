@@ -47,9 +47,14 @@ $(document).ready(function(){
 	var setLnb = window.setTimeout(intLnb,2000);
 	function intLnb(){
 		$('#lnb_wrap').animate({'left':0},300,function(){
-			$('.bg_m').animate({'bottom':319});
+			$('.bg_m').animate({'top':$(window).height()/2,'left':$(window).width()/2});
 		});
 		window.clearTimeout(setLnb);
+		$( window ).resize(function() {
+			$('.bg_m').css({'top':$(window).height()/2,'left':$(window).width()/2});
+		}).scroll(function() {
+			$('.bg_m').css({'top':$(window).height()/2+$(this).scrollTop() ,'left':$(window).width()/2+$(this).scrollLeft()});
+		});
 	}
 	$('#lnb > li').on('mouseenter mouseleave focusin focusout', function(e) {
 		var _this=$(this);

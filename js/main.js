@@ -36,7 +36,9 @@ $(document).ready(function(){
 		infiniteLoop: false,
 		hideControlOnEnd: true,
 		slideWidth:430,
-		slideMargin:10
+		slideMargin:10,
+		nextText:'',
+		prevText:''
 	});
 
 	$( "#mask" ).on( "click", function() {
@@ -47,7 +49,8 @@ $(document).ready(function(){
 	var setLnb = window.setTimeout(intLnb,2000);
 	function intLnb(){
 		$('#lnb_wrap').animate({'left':0},300,function(){
-			$('.bg_m').animate({'top':$(window).height()/2,'left':$(window).width()/2});
+			$('.bg_m').css({'top':$(window).height()/2})
+				.animate({'left':$(window).width()/2});
 		});
 		window.clearTimeout(setLnb);
 		$( window ).resize(function() {
@@ -82,6 +85,10 @@ $(document).ready(function(){
 
 function goToSlider(v){
 	slider.goToSlide(v);
+}
+
+function goToNext(){
+	slider.goToNextSlide();
 }
 
 jQuery('.navi_1depth > li').bind('mouseenter focusin', function(event) {

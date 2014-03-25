@@ -58,6 +58,7 @@ $(document).ready(function(){
 		}).scroll(function() {
 			$('.bg_m').css({'top':$(window).height()/2+$(this).scrollTop() ,'left':$(window).width()/2+$(this).scrollLeft()});
 		});
+		//slider.goToSlide(11);
 	}
 	$('#lnb > li').on('mouseenter mouseleave focusin focusout', function(e) {
 		var _this=$(this);
@@ -81,6 +82,16 @@ $(document).ready(function(){
 			$('#lnb_wrap').removeClass('bg');
 		}
 	});
+	$('#faqList > li').on('click', function(e) {
+		if(e.type === 'click'){
+			$('#faqList > li').removeClass('on');
+			$('#faqList > li').find('dd').slideUp();
+			$(this).addClass('on');
+			$(this).find('dd').slideDown();
+		}
+	});
+
+	
 });
 
 function goToSlider(v){
@@ -90,21 +101,3 @@ function goToSlider(v){
 function goToNext(){
 	slider.goToNextSlide();
 }
-
-jQuery('.navi_1depth > li').bind('mouseenter focusin', function(event) {
-		var _this=jQuery(this);
-		var timer = window.setTimeout(function () {
-			if (_this.find('.navi_sub').css('display')=='none'){
-				jQuery(".navi_1depth > li").find('.navi_sub').hide();
-				_this.find('.navi_sub').show( 'scale',{ direction: 'vertical' }, 200 );
-				//_this.find('.navi_sub').show( 'slide',{ direction: 'left' }, 200 );
-				jQuery('.navi_1depth > li').children('a').removeClass('on');
-				_this.children('a').addClass('on');
-			}
-		}, 100);
-		_this.data('timerid', timer);
-	}).bind('mouseleave', function() {
-		var _this=jQuery(this);
-		var timerid = _this.data('timerid');
-		clearTimeout(timerid);
-	});

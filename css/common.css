@@ -91,5 +91,27 @@ h1.logo{position:absolute;top:40px;left:35px;z-index:100}
 .sub_tit .location{font-family:GillSansLight;font-size:13px;text-align:right;margin-top:7px}
 
 .sns_lst{}
-.sns_lst ul{870px;}
-.sns_lst li{width:278px;height:270px;border:1px solid #B9B2AB;float:left;margin:0 0 10px 10px;}
+.sns_lst ul{width:870px;}
+.sns_lst li{width:278px;height:270px;border:1px solid #B9B2AB;float:left;margin:0 10px 10px 0;position:relative;}
+.sns_lst li .facebook_wrap{background:url(../img/bg_facebook.gif) 20px 15px no-repeat;}
+.sns_lst li .txt{padding:44px 20px 0 20px;line-height:17px;color:#000;font-family:'나눔고딕',NanumGothic;font-size:12px;}
+.sns_lst li .img{margin-top:15px;padding:0 20px}
+.sns_lst li .img img{vertical-align:top;}
+.sns_lst li .share{position:absolute;bottom:0;height:30px;left:0;right:0;border-top:1px solid #B9B2AB;padding:10px 0 0 20px}
+.sns_lst li .share img{vertical-align:top;width:22px;height:22px;background-image:url(../img/sp_sns.gif);margin-right:10px;float:left}
+.sns_lst li .share img.btn_share{background-position:0 0;}
+.sns_lst li .share img.btn_fb{background-position:0 -50px;}
+.sns_lst li .share img.btn_tw{background-position:0 -100px;}
+
+.faq_tit{margin-bottom:14px;}
+.faq_tit img{vertical-align:top;}
+.faq_lst{}
+.faq_lst ul{font-family:'나눔고딕',NanumGothic;width:860px}
+.faq_lst ul li{vertical-align:top;background:url(../img/bu_up.png) 839px 16px no-repeat;}
+.faq_lst ul li dt{background:url(../img/ico_q.png) 1px 11px no-repeat;font-size:14px;padding:12px 30px 11px 20px;line-height:17px;font-weight:bold;border-bottom:1px solid #B2B2B2}
+.faq_lst ul li dt a{color:#000}
+.faq_lst ul li dd{display:none;border-bottom:1px solid #000;background:url(../img/ico_a.png) 0 8px no-repeat;padding:27px 0 14px 0;line-height:18px;font-size:13px;color:#000}
+.faq_lst ul li.on{background:url(../img/bu_dn.png) 839px 16px no-repeat;}
+
+.ifr_sns{width:880px;height:884px;overflow-y:auto;overflow-x:hidden;}
+.ifr_faq{width:880px;height:600px;overflow-y:auto;overflow-x:hidden;}

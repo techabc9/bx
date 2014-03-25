@@ -40,7 +40,7 @@
 
 /* LOADER */
 
-.bx-wrapper .bx-loading {
+.bx-wrapper .bx-loading {display:none;
 	min-height: 50px;
 	background: url(../img/bx_loader.gif) center center no-repeat #fff;
 	height: 100%;

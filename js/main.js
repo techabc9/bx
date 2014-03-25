@@ -1,3 +1,36 @@
+function sel_enable(id){
+	$(id).removeAttr('disabled');
+	if(detectWeb){
+		$(id).selectmenu();
+	}
+}
+
+function sel_disable(id){
+	$(id).attr('disabled','disabled');
+	if(detectWeb){
+		$(id).selectmenu();
+	}
+}
+function setupLabel() {
+	if ($('.label_chk input').length) {
+		$('.label_chk').each(function(){ 
+			$(this).removeClass('c_on');
+		});
+		$('.label_chk input:checked').each(function(){ 
+			$(this).parent('label').addClass('c_on');
+		});
+	};
+	if ($('.label_radio input').length) {
+		$('.label_radio').each(function(){ 
+			$(this).removeClass('r_on');
+		});
+		$('.label_radio input:checked').each(function(){ 
+			$(this).parent('label').addClass('r_on');
+		});
+	};
+};
+
+
 $(document).ready(function(){
 	var $mask=$('#mask');
 	var $slidenc=$('#slideWrap > .slide:not(.bx-clone)');
@@ -58,7 +91,6 @@ $(document).ready(function(){
 		}).scroll(function() {
 			$('.bg_m').css({'top':$(window).height()/2+$(this).scrollTop() ,'left':$(window).width()/2+$(this).scrollLeft()});
 		});
-		//slider.goToSlide(11);
 	}
 	$('#lnb > li').on('mouseenter mouseleave focusin focusout', function(e) {
 		var _this=$(this);
@@ -82,15 +114,11 @@ $(document).ready(function(){
 			$('#lnb_wrap').removeClass('bg');
 		}
 	});
-	$('#faqList > li').on('click', function(e) {
-		if(e.type === 'click'){
-			$('#faqList > li').removeClass('on');
-			$('#faqList > li').find('dd').slideUp();
-			$(this).addClass('on');
-			$(this).find('dd').slideDown();
-		}
+	$('.label_chk, .label_radio').on('click', function() {
+		setupLabel();
 	});
-
+	setupLabel('.label_chk');
+	setupLabel('.label_radio');
 	
 });
 
@@ -100,4 +128,18 @@ function goToSlider(v){
 
 function goToNext(){
 	slider.goToNextSlide();
+}
+
+//input placeholder onblur="onBlur(this)" onfocus="onFocus(this)"
+function onBlur(el) {
+	if (el.value == '') {
+		el.value = el.defaultValue;
+		$(el).removeClass('focusin');
+	}
+}
+function onFocus(el) {
+	if (el.value == el.defaultValue) {
+		el.value = '';
+		$(el).addClass('focusin');
+	}
 }

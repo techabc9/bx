@@ -30,49 +30,211 @@ function setupLabel() {
 	};
 };
 
-
-$(document).ready(function(){
+var currentSlide=0;
+function mainSlide(v){
 	var $mask=$('#mask');
 	var $slidenc=$('#slideWrap > .slide:not(.bx-clone)');
-	slider = $('#slideWrap').bxSlider({
-		slideWidth: 1245,
-		minSlides: 1,
-		maxSlides: 2,
-		controls:false,
-		pager:false,
-		onSliderLoad: function(currentIndex){
-			if (currentIndex == 0 || currentIndex == slider.getSlideCount() - 1){
-				$mask.hide();
-				$('#slideWrap > .slide:not(.bx-clone)').eq(1).addClass('blur2');
-			}else{
-				$mask.show();
+	if (v == 'load'){
+		slider = $('#slideWrap').bxSlider({
+			slideWidth: 1245,
+			touchEnabled: false,
+			minSlides: 1,
+			maxSlides: 2,
+			controls:false,
+			pager:false,
+			startSlide:currentSlide,
+			onSliderLoad: function(currentIndex){
+				if (currentIndex == 0 || currentIndex == slider.getSlideCount() - 1){
+					$mask.hide();
+					$('#slideWrap > .slide:not(.bx-clone)').eq(1).addClass('blur2');
+				}else{
+					$mask.show();
+				}
+			},
+			onSlideBefore: function($slideElement, oldIndex, newIndex){
+				if (newIndex == slider.getSlideCount() - 1){
+					$mask.hide();
+					$slidenc.removeClass('blur blur2');
+				}else if(newIndex == 0){
+					$mask.hide();
+					$slidenc.eq(1).addClass('blur2');
+				}else{
+					$mask.show();
+					$slidenc.removeClass('blur blur2');
+					$slidenc.eq(newIndex+1).addClass('blur');
+				}
+			},
+			onSlideAfter:function($slideElement, oldIndex, newIndex){
+				currentSlide = newIndex;
 			}
-		},
-		onSlideBefore: function($slideElement, oldIndex, newIndex){
-			if (newIndex == slider.getSlideCount() - 1){
-				$mask.hide();
-				$slidenc.removeClass('blur blur2');
-			}else if(newIndex == 0){
-				$mask.hide();
-				$slidenc.eq(1).addClass('blur2');
-			}else{
-				$mask.show();
-				$slidenc.removeClass('blur blur2');
-				$slidenc.eq(newIndex+1).addClass('blur');
-			}
+		});
+		mslide=$('#m_slide').bxSlider({
+			pager:false,
+			slideSelector:'.ms',
+			infiniteLoop: false,
+			touchEnabled: false,
+			hideControlOnEnd: true,
+			slideWidth:430,
+			slideMargin:10,
+			nextText:'',
+			prevText:''
+		});
+		if($(window).width()<=640){
+			slider.reloadSlider({
+				slideWidth: 0,
+				touchEnabled: false,
+				controls:false,
+				pager:false,
+				infiniteLoop:false,
+				adaptiveHeight:true,
+				startSlide:currentSlide,
+				onSliderLoad: function(currentIndex){
+					$slidenc.removeClass('blur blur2');
+				},
+				onSlideBefore: function($slideElement, oldIndex, newIndex){
+					$slidenc.removeClass('blur blur2');
+				},
+				onSlideAfter:function($slideElement, oldIndex, newIndex){
+					currentSlide = newIndex;
+				}
+			});
+			mslide.reloadSlider({
+				pager:false,
+				slideSelector:'.ms',
+				infiniteLoop: false,
+				touchEnabled: false,
+				hideControlOnEnd: true,
+				slideMargin:10,
+				nextText:'',
+				prevText:''
+			});
+		}else{
+			slider.reloadSlider({
+				slideWidth: 1245,
+				touchEnabled: false,
+				minSlides: 1,
+				maxSlides: 2,
+				controls:false,
+				pager:false,
+				startSlide:currentSlide,
+				onSliderLoad: function(currentIndex){
+					if (currentIndex == 0 || currentIndex == slider.getSlideCount() - 1){
+						$mask.hide();
+						$('#slideWrap > .slide:not(.bx-clone)').eq(1).addClass('blur2');
+					}else{
+						$mask.show();
+					}
+				},
+				onSlideBefore: function($slideElement, oldIndex, newIndex){
+					if (newIndex == slider.getSlideCount() - 1){
+						$mask.hide();
+						$slidenc.removeClass('blur blur2');
+					}else if(newIndex == 0){
+						$mask.hide();
+						$slidenc.eq(1).addClass('blur2');
+					}else{
+						$mask.show();
+						$slidenc.removeClass('blur blur2');
+						$slidenc.eq(newIndex+1).addClass('blur');
+					}
+				},
+				onSlideAfter:function($slideElement, oldIndex, newIndex){
+					currentSlide = newIndex;
+				}
+			});
+			mslide.reloadSlider({
+				pager:false,
+				slideSelector:'.ms',
+				infiniteLoop: false,
+				touchEnabled: false,
+				hideControlOnEnd: true,
+				slideWidth:430,
+				slideMargin:10,
+				nextText:'',
+				prevText:''
+			});
 		}
-	});
+	}else{
+		if($(window).width()<=640){
+			slider.reloadSlider({
+				slideWidth: 0,
+				touchEnabled: false,
+				controls:false,
+				pager:false,
+				infiniteLoop:false,
+				adaptiveHeight:true,
+				startSlide:currentSlide,
+				onSliderLoad: function(currentIndex){
+					$slidenc.removeClass('blur blur2');
+				},
+				onSlideBefore: function($slideElement, oldIndex, newIndex){
+					$slidenc.removeClass('blur blur2');
+				},
+				onSlideAfter:function($slideElement, oldIndex, newIndex){
+					currentSlide = newIndex;
+				}
+			});
+			mslide.reloadSlider({
+				pager:false,
+				slideSelector:'.ms',
+				infiniteLoop: false,
+				touchEnabled: false,
+				hideControlOnEnd: true,
+				slideMargin:10,
+				nextText:'',
+				prevText:''
+			});
+		}else{
+			slider.reloadSlider({
+				slideWidth: 1245,
+				touchEnabled: false,
+				minSlides: 1,
+				maxSlides: 2,
+				controls:false,
+				pager:false,
+				startSlide:currentSlide,
+				onSliderLoad: function(currentIndex){
+					if (currentIndex == 0 || currentIndex == slider.getSlideCount() - 1){
+						$mask.hide();
+						$('#slideWrap > .slide:not(.bx-clone)').eq(1).addClass('blur2');
+					}else{
+						$mask.show();
+					}
+				},
+				onSlideBefore: function($slideElement, oldIndex, newIndex){
+					if (newIndex == slider.getSlideCount() - 1){
+						$mask.hide();
+						$slidenc.removeClass('blur blur2');
+					}else if(newIndex == 0){
+						$mask.hide();
+						$slidenc.eq(1).addClass('blur2');
+					}else{
+						$mask.show();
+						$slidenc.removeClass('blur blur2');
+						$slidenc.eq(newIndex+1).addClass('blur');
+					}
+				},
+				onSlideAfter:function($slideElement, oldIndex, newIndex){
+					currentSlide = newIndex;
+				}
+			});
+			mslide.reloadSlider({
+				pager:false,
+				slideSelector:'.ms',
+				infiniteLoop: false,
+				touchEnabled: false,
+				hideControlOnEnd: true,
+				slideWidth:430,
+				slideMargin:10,
+				nextText:'',
+				prevText:''
+			});
+		}
+	}
+}
 
-	mslide=$('#m_slide').bxSlider({
-		pager:false,
-		slideSelector:'.ms',
-		infiniteLoop: false,
-		hideControlOnEnd: true,
-		slideWidth:430,
-		slideMargin:10,
-		nextText:'',
-		prevText:''
-	});
+$(document).ready(function(){
+	mainSlide('load');
 
 	$( "#mask" ).on( "click", function() {
 		slider.goToNextSlide();
@@ -98,7 +260,7 @@ $(document).ready(function(){
 			var timer = window.setTimeout(function () {
 				_this.addClass('hover');
 				_this.find('.dep2').slideDown();
-			}, 100);
+			}, 200);
 			_this.data('timerid', timer);
 		}else if(e.type === 'mouseleave' || e.type === 'focusout'){
 			_this.removeClass('hover');
@@ -120,6 +282,16 @@ $(document).ready(function(){
 	setupLabel('.label_chk');
 	setupLabel('.label_radio');
 	
+});
+
+$(window).bind('resize', function(e){
+	window.resizeEvt;
+	$(window).resize(function(){
+		clearTimeout(window.resizeEvt);
+		window.resizeEvt = setTimeout(function(){
+			mainSlide();
+		}, 500);
+	});
 });
 
 function goToSlider(v){

@@ -3,13 +3,65 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi" />
 <title></title>
 <link rel="stylesheet" type="text/css" href="../css/common.css" />
 <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
 </head>
 <body>
 <div id="wrap">
-	<h1 class="logo"><a href="#"><img src="../img/logo.png" alt="Restylane" /></a></h1>
+	<div class="header">
+		<h1 class="logo"><a href="#"><img src="../img/logo.png" alt="Restylane" /></a></h1>
+	</div>
+	<div id="lnb_wrap">
+		<div class="menu">
+			<ul id="lnb">
+				<li><a href="javascript:goToSlider(1)">HA필러 레스틸렌</a>
+					<ul class="dep2">
+						<li><a href="javascript:goToSlider(1)">레스틸렌 인포그래픽</a></li>
+						<li><a href="javascript:goToSlider(2)">레스틸렌 테크놀로지</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:goToSlider(3)">레스틸렌 제품</a>
+					<ul class="dep2">
+						<li><a href="javascript:goToSlider(3)">레스틸렌 리도카인</a></li>
+						<li><a href="javascript:goToSlider(4)">레스틸렌 제품군</a></li>
+						<li><a href="javascript:goToSlider(5)">레스틸렌 효능/효과 및 이상반응</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:goToSlider(6)">레스틸렌 시술팁</a></li>
+				<li><a href="javascript:goToSlider(7)">레스틸렌 스킨케어</a></li>
+				<li><a href="javascript:goToSlider(8)">레스틸렌 뉴스</a>
+					<ul class="dep2">
+						<li><a href="javascript:goToSlider(8)">SNS</a></li>
+						<li><a href="javascript:goToSlider(9)">PRESS</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:goToSlider(10)">레스틸렌 문의</a>
+					<ul class="dep2">
+						<li><a href="javascript:goToSlider(10)">FAQ</a></li>
+						<li><a href="javascript:goToSlider(11)">MAIL</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search">
+				<label for="ip_search" class="blind">검색</label>
+				<input type="text" class="ip_search" id="ip_search" />
+				<button class="btn_search"><div class="blind">검색</div></button>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<div class="link">
+				<a href="javascript:goToSlider(8)"><img src="../img/trans.gif" alt="SNS" class="link1" /></a>
+				<a href="javascript:goToSlider(11)"><img src="../img/trans.gif" alt="FAQ" class="link2" /></a>
+				<a href="javascript:goToSlider(0)"><img src="../img/trans.gif" alt="Home" class="link3" /></a>
+			</div>
+			<div class="text">
+				<img src="../img/footer_txt.png" alt="&copy; 2014 Restylane" />
+			</div>
+		</div>
+	</div>
 	<div id="slideWrap" class="slide_wrap">
 		<div class="slide">
 			<div class="bg_m">
@@ -50,7 +102,6 @@
 				</div>
 				<img src="../img/img_sub1.jpg" alt="" />
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -61,7 +112,6 @@
 				</div>
 				<img src="../img/img_sub2.jpg" alt="레스틸렌 테크놀로지" />
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -72,7 +122,6 @@
 				</div>
 				<img src="../img/img_sub3.jpg" alt="레스틸렌 리도카인" />
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -85,7 +134,6 @@
 					<img src="../img/img_sub4.jpg" alt="레스틸렌 제품목록" />
 				</div>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next2"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -96,7 +144,6 @@
 				</div>
 				<img src="../img/img_sub5.jpg" alt="레스틸렌 제품관리" />
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -107,7 +154,6 @@
 				</div>
 				<img src="../img/img_sub6.jpg" alt="레스틸렌 시술전" />
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -117,7 +163,6 @@
 					<div class="location">RESTYLANE / SKIN CARE</div>
 				</div>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -128,7 +173,6 @@
 				</div>
 				<iframe src="ifr_sns.html" frameborder="0" class="ifr_sns"></iframe>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next2"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -139,7 +183,6 @@
 				</div>
 				<iframe src="ifr_press.html" frameborder="0" class="ifr_sns"></iframe>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -151,7 +194,6 @@
 				<div class="faq_tit"><img src="../img/img_faq.jpg" alt="FAQ" /></div>
 				<iframe src="ifr_faq.html" frameborder="0" class="ifr_faq"></iframe>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next2"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 		<div class="slide">
 			<a href="javascript:goToSlider(0)" class="btn_shome"><img src="../img/btn_home.png" alt="Home" /></a>
@@ -216,59 +258,10 @@
 					</div>
 				</div>
 			</div>
-			<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 		</div>
 	</div>
 	<div id="mask"></div>
-	<div id="lnb_wrap">
-		<div class="menu">
-			<ul id="lnb">
-				<li><a href="javascript:goToSlider(1)">HA필러 레스틸렌</a>
-					<ul class="dep2">
-						<li><a href="javascript:goToSlider(1)">레스틸렌 인포그래픽</a></li>
-						<li><a href="javascript:goToSlider(2)">레스틸렌 테크놀로지</a></li>
-					</ul>
-				</li>
-				<li><a href="javascript:goToSlider(3)">레스틸렌 제품</a>
-					<ul class="dep2">
-						<li><a href="javascript:goToSlider(3)">레스틸렌 리도카인</a></li>
-						<li><a href="javascript:goToSlider(4)">레스틸렌 제품군</a></li>
-						<li><a href="javascript:goToSlider(5)">레스틸렌 효능/효과 및 이상반응</a></li>
-					</ul>
-				</li>
-				<li><a href="javascript:goToSlider(6)">레스틸렌 시술팁</a></li>
-				<li><a href="javascript:goToSlider(7)">레스틸렌 스킨케어</a></li>
-				<li><a href="javascript:goToSlider(8)">레스틸렌 뉴스</a>
-					<ul class="dep2">
-						<li><a href="javascript:goToSlider(8)">SNS</a></li>
-						<li><a href="javascript:goToSlider(9)">PRESS</a></li>
-					</ul>
-				</li>
-				<li><a href="javascript:goToSlider(10)">레스틸렌 문의</a>
-					<ul class="dep2">
-						<li><a href="javascript:goToSlider(10)">FAQ</a></li>
-						<li><a href="javascript:goToSlider(11)">MAIL</a></li>
-					</ul>
-				</li>
-			</ul>
-			<div class="search">
-				<label for="ip_search" class="blind">검색</label>
-				<input type="text" class="ip_search" id="ip_search" />
-				<button class="btn_search"><div class="blind">검색</div></button>
-			</div>
-		</div>
-		
-		<div class="footer">
-			<div class="link">
-				<a href="javascript:goToSlider(8)"><img src="../img/trans.gif" alt="SNS" class="link1" /></a>
-				<a href="javascript:goToSlider(11)"><img src="../img/trans.gif" alt="FAQ" class="link2" /></a>
-				<a href="javascript:goToSlider(0)"><img src="../img/trans.gif" alt="Home" class="link3" /></a>
-			</div>
-			<div class="text">
-				<img src="../img/footer_txt.png" alt="&copy; 2014 Restylane" />
-			</div>
-		</div>
-	</div>
+	<a href="javascript:goToNext()" class="btn_next"><img src="../img/btn_next.png" alt="다음" /></a>
 </div>
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>

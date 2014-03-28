@@ -83,8 +83,7 @@ h1.logo{position:absolute;top:40px;left:35px;z-index:100}
 .sub_wrap .scr{overflow-y:auto;overflow-x:hidden;height:884px;width:880px}
 .slide.blur .sub_wrap{margin-left:0}
 .btn_shome{position:absolute;top:12px;right:40px}
-.btn_next{position:absolute;bottom:75px;right:70px}
-.btn_next2{position:absolute;bottom:40px;right:70px}
+.btn_next{position:fixed;bottom:100px;left:1150px}
 
 .sub_tit{height:96px;width:860px;}
 .sub_tit h1{font-family:GillSansLight;font-size:52px;line-height:52px;font-weight:normal;border-bottom:2px solid #000;height:60px;}
@@ -108,7 +107,7 @@ h1.logo{position:absolute;top:40px;left:35px;z-index:100}
 .faq_lst{}
 .faq_lst ul{font-family:'나눔고딕',NanumGothic;width:860px}
 .faq_lst ul li{vertical-align:top;background:url(../img/bu_up.png) 839px 16px no-repeat;}
-.faq_lst ul li dt{background:url(../img/ico_q.png) 1px 11px no-repeat;font-size:14px;padding:12px 30px 11px 20px;line-height:17px;font-weight:bold;border-bottom:1px solid #B2B2B2}
+.faq_lst ul li dt{background:url(../img/ico_q.png) 1px 11px no-repeat;font-size:14px;padding:12px 30px 11px 20px;line-height:17px;font-weight:bold;border-bottom:1px solid #B2B2B2;cursor:pointer}
 .faq_lst ul li dt a{color:#000}
 .faq_lst ul li dd{display:none;border-bottom:1px solid #000;background:url(../img/ico_a.png) 0 8px no-repeat;padding:27px 0 14px 0;line-height:18px;font-size:13px;color:#000}
 .faq_lst ul li.on{background:url(../img/bu_dn.png) 839px 16px no-repeat;}
@@ -141,3 +140,31 @@ label.r_on{background: url(../img/sp_radio.gif) 0 -50px no-repeat;}
 .mail_wrap .send_text .ip_textarea{border:1px solid #B9B2AB;width:595px;height:150px;padding:5px;font-family:'나눔고딕',NanumGothic;line-height:17px;color:#000}
 .mail_wrap .send_text .btn_area{margin-top:12px;}
 .mail_wrap .send_text .btn_send{background:url(../img/btn_send.gif) 0 0 no-repeat;width:100px;height:50px;}
+
+@media (max-width: 640px) and (min-width: 0) {
+#wrap{background-size:100%;min-width:100%;padding-bottom:90px;background-attachment:fixed;}
+.header{background:#000;}
+h1.logo{position:absolute;top:10px;left:50%;z-index:100;margin-left:-90px}
+#lnb_wrap{position:static;width:100%;height:auto;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+.menu{position:static;width:90%;padding:90px 0 20px;margin-left:5%;}
+.search{position:absolute;top:50px;right:10%;display:none}
+.footer{position:absolute;width:100%;left:0;right:0;bottom:10px}
+.footer .text{text-align:center;}
+.sub_wrap{width:90%;height:auto;padding:5%;margin:0;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+.sub_wrap img{max-width:90%}
+.sub_wrap .scr{overflow:visible;height:auto;width:100%;}
+.slide_wrap .slide .bx-wrapper{margin:0 !important}
+.slide_wrap .slide{position:relative;height:auto}
+.sub_tit{width:90%;height:80px}
+.sub_tit h1{font-size:24px;height:40px;line-height:40px;}
+.sub_tit .location{margin-top:5px}
+
+.bg_m{background-size:100%;position:static;margin:0 0 0 15%;width:70%;height:auto;max-height:300px;min-height:300px}
+.m_slide .ms{width:auto;height:auto;padding:0;}
+.m_slide .ms h1{font-size:40px;line-height:45px}
+.m_slide .ms p{width:100%;margin-top:15px}
+.bg_m .bx-wrapper .bx-controls-direction a.bx-prev{top:260px;left:auto;right:60px;}
+.bg_m .bx-wrapper .bx-controls-direction a.bx-next{top:260px;left:auto;right:50px:}
+
+#mask,.btn_next,.btn_next2,.btn_shome{display:none}
+}

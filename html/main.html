@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" />
 </head>
 <body>
-<div class="top_nav">
+<div class="top_nav top_mov" id="topNav">
 	<div class="nav_w">
 		<h1 class="logo">
 			<a href="#cont0" onclick="goTop()"><img src="../img/logo.png" alt="" /></a>
@@ -47,7 +47,17 @@
 </div>
 <div class="wrap">
 	<div id="cont0" class="full_section">
-		<div class="main_w">
+		<div id="cont_mov">
+			<object width="100%" height="100%">
+				<param name="movie" value="http://www.youtube.com/v/RZFsTZ-QMbw?version=2&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;rel=0"></param>
+				<param name="allowFullScreen" value="true"></param>
+				<param name="allowscriptaccess" value="always"></param>
+				<param name="wmode" value="transparent">
+				<embed src="http://www.youtube.com/v/RZFsTZ-QMbw?version=2&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;rel=0" type="application/x-shockwave-flash" width="100%" height="100%" allowscriptaccess="always" allowfullscreen="true" frameborder="0" allowfullscreen="1" wmode="transparent"></embed>
+			</object>
+			<!-- <iframe width="100%" src="http://www.youtube.com/v/RZFsTZ-QMbw?version=3&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;rel=0" frameborder="0" allowfullscreen="1"></iframe> -->
+		</div>
+		<div class="main_w" id="mainThmb">
 			<ul class="main_div">
 				<li class="roll_img">
 					<div id="main_slider">
@@ -74,7 +84,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#cont3" class="link_slide">
+					<a href="#cont4" class="link_slide">
 						<div class="ty1">
 							<h1>RESTYLANE<br />PRODUCTS</h1>
 							<span class="more"></span>
@@ -105,14 +115,14 @@
 				<li>
 					<div class="ty1">
 						<h1>RESTYLANE<br />SNS</h1>
-						<a href="#cont8" class="more link_slide"></a>
+						<a href="#cont7" class="more link_slide"></a>
 						<ul class="thmb_sns">
 							<li class="ic_facebook">
-								<a href="#cont8" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
+								<a href="#cont7" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
 									여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
 							</li>
 							<li class="ic_facebook">
-								<a href="#cont8" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
+								<a href="#cont7" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
 									여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
 							</li>
 						</ul>
@@ -126,8 +136,8 @@
 			</ul>
 		</div>
 		<div class="footer">
-			<a href="#cont8" class="ic_sns link_slide"><span class="blind">SNS</span></a>
-			<a href="#cont10" class="ic_faq link_slide"><span class="blind">FAQ</span></a>
+			<a href="#cont7" class="ic_sns link_slide"><span class="blind">SNS</span></a>
+			<a href="#cont9" class="ic_faq link_slide"><span class="blind">FAQ</span></a>
 			<a href="#cont0" class="ic_home link_slide"><span class="blind">Home</span></a>
 			<div class="copyright"><span>&copy;</span> 2014 Restylane</div>
 		</div>
@@ -795,12 +805,13 @@
 	</div>
 </div>
 <div class="footer">
-	<a href="#cont8" class="ic_sns link_slide"><span class="blind">SNS</span></a>
-	<a href="#cont10" class="ic_faq link_slide"><span class="blind">FAQ</span></a>
+	<a href="#cont7" class="ic_sns link_slide"><span class="blind">SNS</span></a>
+	<a href="#cont9" class="ic_faq link_slide"><span class="blind">FAQ</span></a>
 	<a href="#cont0" class="ic_home link_slide"><span class="blind">Home</span></a>
 	<div class="copyright"><span>&copy;</span> 2014 Restylane</div>
 </div>
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script> 
 <script type="text/javascript" src="../js/main.js"></script>
 </body>

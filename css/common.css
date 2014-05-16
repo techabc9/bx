@@ -67,7 +67,8 @@ body{background:#fff}
 #cont_mov .mov_area .line{background:url(../img/line_mov2.gif) 0 0 no-repeat;height:33px;margin:0 0 12px 0}
 #cont_mov .bar_hidden{height:575px;overflow:hidden;margin-bottom:12px;}
 
-.footer{height:73px;background:url(../img/line_footer.gif) 0 0 repeat-x;width:1100px;margin:30px auto 0 auto;position:relative;font-family:'윤고딕',YDGothic;z-index:1}
+.footer_wrap{position:fixed;bottom:0;left:0;right:0;z-index:10000;height:100px;width:1100px;margin:0 auto;}
+.footer{height:73px;background:url(../img/line_footer.gif) #fff 0 0 repeat-x;width:1100px;margin:0 auto;position:absolute;top:100px;left:0;right:0;font-family:'윤고딕',YDGothic;z-index:1;}
 .footer .txt{position:absolute;left:10px;top:32px;font-size:11px;letter-spacing:-1px;}
 .footer .txt:after{content:''; display:block; clear:both;}
 .footer .txt li{float:left;line-height:17px;background:url(../img/bu_dot.gif) 0 6px no-repeat;padding-left:5px;margin-right:13px}

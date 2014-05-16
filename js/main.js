@@ -146,6 +146,21 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	//footer
+	$('#footerWrap').on('mouseenter mouseleave focusin focusout', function(e) {
+		var _this=$(this);
+		if(e.type === 'mouseenter' || e.type === 'focusin'){
+			var timer = window.setTimeout(function () {
+				_this.find('.footer').animate({'top':'27px'})
+			}, 200);
+			_this.data('timerid', timer);
+		}else if(e.type === 'mouseleave' || e.type === 'focusout'){
+			_this.find('.footer').animate({'top':'100px'})
+			var timerid = _this.data('timerid');
+			clearTimeout(timerid);
+		}
+	});
 	
 	//FAQ
 	var $faqList = $('#faqList > li');

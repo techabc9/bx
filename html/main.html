@@ -13,7 +13,7 @@
 <div class="top_nav" id="topNav">
 	<div class="nav_w">
 		<h1 class="logo">
-			<a href="#cont0" onclick="goTop()"><img src="../img/logo.png" alt="" /></a>
+			<a href="#cont0" onClick="goTop()"><img src="../img/logo.png" alt="" /></a>
 		</h1>
 		<ul class="nav_btn" id="Nav">
 				<li><a href="#Info">레스틸렌이란</a>
@@ -70,7 +70,65 @@
 #bgBtm.ty2 .skin_left div{background-image:url(../img/bg_left_t2.jpg)}
 #bgBtm.ty2 .skin_right div{background-image:url(../img/bg_right_t2.jpg)}
 </style>
-<div class="wrap">
+<div id="mTopNav" class="m_top_cat">
+	<h1 class="logo">
+		<a href="#cont0" onclick="goTop()"><img src="../img/m_logo2.png" alt="" /></a>
+	</h1>
+	<ul class="nav_btn">
+		<li><a href="#Info">레스틸렌이란</a>
+			<div class="dep2">
+				<span class="arr"></span>
+				<ul>
+					<li data-cont="1"><a href="#Info">레스틸렌 인포그래픽</a></li>
+					<li data-cont="2"><a href="#Tech">레스틸렌 테크놀로지</a></li>
+					<li data-cont="3"><a href="#Million">20Million</a></li>
+					<li data-cont="4"><a href="#History">Restylane history</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#Product">레스틸렌 제품</a>
+			<div class="dep2">
+				<span class="arr"></span>
+				<ul>
+					<li data-cont="5"><a href="#Lidocain">레스틸렌 리도카인</a></li>
+					<li data-cont="6"><a href="#Product">레스틸렌 제품군</a></li>
+				</ul>
+			</div>
+		</li>
+		<li data-cont="7"><a href="#Tip">레스틸렌 시술팁</a></li>
+		<li data-cont="8"><a href="#Care">레스틸렌 스킨케어</a></li>
+		<li><a href="#News">레스틸렌 뉴스</a>
+			<div class="dep2">
+				<span class="arr"></span>
+				<ul>
+					<li data-cont="9"><a href="#Sns">SNS</a></li>
+					<li data-cont="10"><a href="#News">PRESS</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#Faq">레스틸렌 문의</a>
+			<div class="dep2">
+				<span class="arr"></span>
+				<ul>
+					<li data-cont="11"><a href="#Faq">FAQ</a></li>
+					<li data-cont="12"><a href="#Mail">MAIL</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="wrap" id="wrapBody">
+	<div class="m_top_nav_w">
+		<div class="m_top_nav">
+			<h1 class="logo">
+				<a href="#cont0" onclick="goTop()"><img src="../img/m_logo.png" alt="" /></a>
+			</h1>
+			<div class="m_top_btn">
+				<button class="btn_cat" id="btnCat"><span class="blind">카테고리</span></button>
+				<button class="btn_search"><span class="blind">검색</span></button>
+			</div>
+		</div>
+	</div>
 	<div id="cont0" class="full_section" data-bg="n">
 		<div id="cont_mov">
 			<div class="btn_mov">
@@ -88,94 +146,113 @@
 						<embed src="http://www.youtube.com/v/RZFsTZ-QMbw?version=2&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;wmode=transparent&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1&amp;rel=0" type="application/x-shockwave-flash" width="1022" height="600" allowscriptaccess="always" allowfullscreen="true" frameborder="0" allowfullscreen="1" wmode="transparent"></embed>
 					</object>
 				</div>
+				<iframe width="90%" height="280" src="//www.youtube.com/embed/RZFsTZ-QMbw" frameborder="0" allowfullscreen class="m_mov"></iframe>
 				<div class="line"></div>
 			</div>
 		</div>
 		<div class="main_w" id="mainThmb">
 			<ul class="main_div">
 				<li class="roll_img">
-					<div id="main_slider">
-						<div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
-						<div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
-						<div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
-						<div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
-					</div>
+                	<div class="inner">
+                        <div id="main_slider">
+                            <div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
+                            <div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
+                            <div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
+                            <div class="slide"><img src="../img/banner_main1.jpg" alt="" /></div>
+                        </div>
+                    </div>
 				</li>
 				<li>
-					<a href="#news" class="link_slide">
-						<div class="ty1">
-							<h1><span>RESTYLANE</span><div class="tit" style="color:#606D7E">NEWS</div></h1>
-							<span class="more"></span>
-						</div>
-					</a>
+                	<div class="inner">
+                        <a href="#news" class="link_slide">
+                            <div class="ty1">
+                                <h1><span>RESTYLANE</span><div class="tit" style="color:#606D7E">NEWS</div></h1>
+                                <span class="more"></span>
+                            </div>
+                        </a>
+                    </div>
 				</li>
 				<li>
-					<div class="ty_img">
-						<div class="thmb"><img src="../img/thmb_sp1.jpg" alt="" /></div>
-					</div>
+                	<div class="inner">
+                        <div class="ty_img">
+                            <div class="thmb"><img src="../img/thmb_sp1.jpg" alt="" /></div>
+                        </div>
+                    </div>
 				</li>
 				<li>
-					<a href="#Lidocain" class="link_slide">
-						<div class="ty1">
-							<h1><span>RESTYLANE</span><div class="tit" style="color:#E3AD46">LIDOCAIN</div></h1>
-							<span class="more"></span>
-						</div>
-					</a>
+                	<div class="inner">
+                        <a href="#Lidocain" class="link_slide">
+                            <div class="ty1">
+                                <h1><span>RESTYLANE</span><div class="tit" style="color:#E3AD46">LIDOCAIN</div></h1>
+                                <span class="more"></span>
+                            </div>
+                        </a>
+                    </div>
 				</li>
 				<li>
-					<div class="ty_img">
-						<div class="thmb"><img src="../img/thmb_sp2.jpg" alt="" /></div>
-					</div>
+                	<div class="inner">
+                        <div class="ty_img">
+                            <div class="thmb"><img src="../img/thmb_sp2.jpg" alt="" /></div>
+                        </div>
+                    </div>
 				</li>
 				<li>
-					<div class="ty1">
-						<h1><span>RESTYLANE</span><div class="tit" style="color:#5E6B7E">SNS</div></h1>
-						<a href="#Sns" class="more link_slide"></a>
-						<ul class="thmb_sns">
-							<li class="ic_facebook">
-								<a href="#Sns" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
-									여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
-							</li>
-							<li class="ic_facebook">
-								<a href="#Sns" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
-									여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
-							</li>
-						</ul>
-					</div>
+                	<div class="inner">
+                        <div class="ty1">
+                            <h1><span>RESTYLANE</span><div class="tit" style="color:#5E6B7E">SNS</div></h1>
+                            <a href="#Sns" class="more link_slide"></a>
+                            <ul class="thmb_sns">
+                                <li class="ic_facebook">
+                                    <a href="#Sns" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
+                                        여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
+                                </li>
+                                <li class="ic_facebook">
+                                    <a href="#Sns" class="link_slide">레스틸렌 옥외광고 인증샷 이벤트 시즌2<br />
+                                        여러분의 뜨거운 성원에 힘입어 이벤트 기간을 연장해 진행합니다!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 				</li>
 				<li>
-					<div class="ty_img">
-						<div class="thmb"><img src="../img/thmb_sp3.jpg" alt="" /></div>
-					</div>
+                	<div class="inner">
+                        <div class="ty_img">
+                            <div class="thmb"><img src="../img/thmb_sp3.jpg" alt="" /></div>
+                        </div>
+                    </div>
 				</li>
 				<li>
-					<a href="#Info" class="link_slide">
-						<div class="ty1">
-							<h1><span>RESTYLANE</span><div class="tit" style="color:#606A7C">INFOGRAPHIC</div></h1>
-							<span class="more"></span>
-						</div>
-					</a>
+                	<div class="inner">
+                        <a href="#Info" class="link_slide">
+                            <div class="ty1">
+                                <h1><span>RESTYLANE</span><div class="tit" style="color:#606A7C">INFOGRAPHIC</div></h1>
+                                <span class="more"></span>
+                            </div>
+                        </a>
+                    </div>
 				</li>
 				<li>
-					<a href="#News" class="link_slide">
-						<div class="ty1">
-							<h1><span>RESTYLANE</span><div class="tit" style="color:#E3AF43">NOTICE</div></h1>
-							<span class="more"></span>
-						</div>
-					</a>
+                	<div class="inner">
+                        <a href="#News" class="link_slide">
+                            <div class="ty1">
+                                <h1><span>RESTYLANE</span><div class="tit" style="color:#E3AF43">NOTICE</div></h1>
+                                <span class="more"></span>
+                            </div>
+                        </a>
+                    </div>
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div id="Info" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE / </span>INFOGRAPHIC <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE / </span>INFOGRAPHIC <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			
 		</div>
 	</div>
 	<div id="Tech" class="full_section" data-bg="y" data-skin="ty1">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE / </span>TECHNOLOGY <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE / </span>TECHNOLOGY <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>레스틸렌<em>®</em>의 특허기술, NASHA™ 소개<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
@@ -207,19 +284,19 @@
 	</div>
 	<div id="Million" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE / </span>20MILLION <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE / </span>20MILLION <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			
 		</div>
 	</div>
 	<div id="History" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE / </span>HISTORY <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE / </span>HISTORY <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			
 		</div>
 	</div>
 	<div id="Lidocain" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE / </span>LIDOCAINE <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE / </span>LIDOCAINE <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>통증을 줄인 편안한 필러, 레스틸렌 리도카인 통증 걱정으로부터의 자유!<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
@@ -249,14 +326,14 @@
 	</div>
 	<div id="Product" class="full_section" data-bg="y" data-skin="ty2">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE PRODUCTS / </span>PRODUCTS LIST <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE PRODUCTS / </span>PRODUCTS LIST <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>레스틸렌 제품리스트<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
 			<div class="sub_inner">
 				<ul class="prod_tab">
-					<li class="on"><a href="javascript:void(0)" onclick="tab('.prod_lst','#prodTab1',this)">리도카인 포함 제품군</a></li>
-					<li><a href="javascript:void(0)" onclick="tab('.prod_lst','#prodTab2',this)">리도카인 불포함 제품군</a></li>
+					<li class="on"><a href="javascript:void(0)" onClick="tab('.prod_lst','#prodTab1',this)">리도카인 포함 제품군</a></li>
+					<li><a href="javascript:void(0)" onClick="tab('.prod_lst','#prodTab2',this)">리도카인 불포함 제품군</a></li>
 				</ul>
 				<div class="prod_lst" id="prodTab1" style="display:block">
 					<ul>
@@ -343,7 +420,7 @@
 	</div>
 	<div id="Tip" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE TREATMENTS TIP / </span>TREATMENTS <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE TREATMENTS TIP / </span>TREATMENTS <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>레스틸렌<em>®</em> 효능 효과 및 이상반응<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
@@ -364,7 +441,7 @@
 	</div>
 	<div id="Care" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE TREATMENTS TIP / </span>TREATMENTS <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE TREATMENTS TIP / </span>TREATMENTS <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>레스틸렌 시술 전 확인해 보세요<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
@@ -391,7 +468,7 @@
 	</div>
 	<div id="Sns" class="full_section" data-bg="n">
 		<div class="sub_cont bg_none">
-			<h1 class="sub_tit"><span>RESTYLANE NEWS /</span>SNS <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE NEWS /</span>SNS <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="sns_lst">
 				<ul>
 					<li>
@@ -572,7 +649,7 @@
 	</div>
 	<div id="News" class="full_section" data-bg="n">
 		<div class="sub_cont bg_none">
-			<h1 class="sub_tit"><span>RESTYLANE NEWS /</span>PRESS <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE NEWS /</span>PRESS <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="press_lst">
 				<ul class="press_top">
 					<li>
@@ -720,7 +797,7 @@
 	</div>
 	<div id="Faq" class="full_section" data-bg="n">
 		<div class="sub_cont bg_none">
-			<h1 class="sub_tit"><span>RESTYLANE /</span>FAQ <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE /</span>FAQ <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="faq_lst">
 				<ul id="faqList">
 					<li>
@@ -792,7 +869,7 @@
 	</div>
 	<div id="Mail" class="full_section" data-bg="n">
 		<div class="sub_cont">
-			<h1 class="sub_tit"><span>RESTYLANE /</span> MAIL <a href="#cont0" onclick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
+			<h1 class="sub_tit"><span>RESTYLANE /</span> MAIL <a href="#cont0" onClick="goTop()" class="btn_home"><img src="../img/btn_home.png" alt="HOME" /></a></h1>
 			<div class="tit_bx">
 				<p>제품에 대한 문의 사항 또는 의견을 보내주세요.<span class="bg_left"></span><span class="bg_right"></span></p>
 			</div>
@@ -831,13 +908,13 @@
 					</div>
 					<div class="send_text">
 						<div class="inp">
-							<label for="tx_name">이름</label><input type="text" id="tx_name" class="ip_txt" onblur="onBlur(this)" onfocus="onFocus(this)" value="이름" />
+							<label for="tx_name">이름</label><input type="text" id="tx_name" class="ip_txt" onBlur="onBlur(this)" onFocus="onFocus(this)" value="이름" />
 						</div>
 						<div class="inp">
-							<label for="tx_email">이메일 주소</label><input type="text" id="tx_email" class="ip_txt" onblur="onBlur(this)" onfocus="onFocus(this)" value="이메일 주소" />
+							<label for="tx_email">이메일 주소</label><input type="text" id="tx_email" class="ip_txt" onBlur="onBlur(this)" onFocus="onFocus(this)" value="이메일 주소" />
 						</div>
 						<div class="inp">
-							<label for="tx_number">연락처</label><input type="text" id="tx_number" class="ip_txt" onblur="onBlur(this)" onfocus="onFocus(this)" value="연락처" />
+							<label for="tx_number">연락처</label><input type="text" id="tx_number" class="ip_txt" onBlur="onBlur(this)" onFocus="onFocus(this)" value="연락처" />
 						</div>
 						<div class="inp">
 							<textarea id="tx_textarea" cols="30" rows="10" class="ip_textarea"></textarea>

@@ -256,6 +256,23 @@ label.r_on{background: url(../img/sp_radio.gif) 0 -50px no-repeat;}
 .m_top_cat .nav_btn > li.on .dep2{display:block}
 .m_mov{display:none;margin:0 auto 15px auto}
 
+@media (min-width:640px) and (max-width:1100px) {
+.top_nav,.skin_btm{display:none}
+.m_top_nav_w{display:block;height:80px}
+.m_top_nav{height:74px;}
+.m_top_nav .logo{top:16px;left:20px;}
+.m_top_nav .logo img{width:100%}
+.m_top_nav .m_top_btn{top:22px;right:20px}
+.m_top_nav .m_top_btn button{width:30px;height:30px;margin-left:20px}
+.m_top_nav .m_top_btn button.btn_cat{background-size:30px 30px;}
+.m_top_nav .m_top_btn button.btn_search{background-size:30px 30px;}
+#cont_mov{padding-top:20px;width:100%;margin:0 auto -150px auto;}
+#cont_mov .btn_mov{height:80px;position:relative;width:100%;padding-bottom:40px;}
+#cont_mov .btn_mov .toggle{background:url(../img/btn_mov.png) 0 0 no-repeat;width:117px;height:22px;position:absolute;right:0}
+#cont_mov.mov_off .btn_mov{background:none;margin-bottom:0;height:22px}
+#cont_mov.mov_off .btn_mov .toggle{top:84px;right:0;bottom:auto;left:auto;z-index:100}
+}
+
 @media (max-width: 640px) and (min-width: 0) {
 .nav_w{display:none}
 .main_div{ width:auto; padding:183px 2px 80px 2px;}

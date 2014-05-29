@@ -209,6 +209,12 @@ $(document).ready(function(){
 			m_cat_h()
 		}
 	});
+
+	//상품목록
+	$('.prod_lst .thmb img').load(function() {
+		$(this).css('marginTop',($(this).parent().next('.prod_de').outerHeight() - $(this).height())/2);
+	});
+	
 	
 });
 //input placeholder onblur="onBlur(this)" onfocus="onFocus(this)"

@@ -74,12 +74,12 @@ $(document).ready(function(){
 				$('#Nav li[data-cont='+i+']').addClass('on');
 				$('#Nav li[data-cont='+i+']').parents('li').addClass('on');
 				nav_on = i;
-				if ($('.full_section').eq(i).attr('data-bg') == 'n'){
-					$('#bgBtm').attr('class','skin_btm');
-				}else{
-					$('#bgBtm').attr('class','skin_btm '+$('.full_section').eq(i).attr('data-skin')).fadeIn();
-				}
 			}
+		}
+		if ($('.full_section').eq(nav_on).attr('data-bg') == 'n'){
+			$('#bgBtm').animate({'opacity':0},function(){$(this).attr('class','skin_btm')});
+		}else{
+			$('#bgBtm').attr('class','skin_btm '+$('.full_section').eq(nav_on).attr('data-skin')).animate({'opacity':1});
 		}
 	}
 	

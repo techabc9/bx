@@ -167,6 +167,16 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#infoGraphic').bxSlider({
+		slideSelector:'div.slide',
+		touchEnabled:false,
+		pager:true,
+		nextText:'',
+		prevText:'',
+		adaptiveHeight:true,
+		startSlide:0
+	});
+
 	//footer
 	$('#footerWrap').on('mouseenter mouseleave focusin focusout', function(e) {
 		var _this=$(this);

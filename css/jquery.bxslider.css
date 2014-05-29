@@ -91,12 +91,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 20px;
-	background: url(../img/sp_arr.png) no-repeat 0 0;
+	background: url(../img/left.png) no-repeat 0 0;
 }
 
 .bx-wrapper .bx-next {
 	right: 20px;
-	background: url(../img/sp_arr.png) no-repeat 0 -50px;
+	background: url(../img/right.png) no-repeat 0 0;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -110,10 +110,10 @@
 .bx-wrapper .bx-controls-direction a {
 	position: absolute;
 	top: 50%;
-	margin-top: -24px;
+	margin-top: -30px;
 	outline: 0;
-	width: 48px;
-	height: 48px;
+	width: 21px;
+	height: 61px;
 	text-indent: -9999px;
 	z-index: 9999;
 }

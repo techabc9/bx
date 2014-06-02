@@ -225,6 +225,15 @@ $(document).ready(function(){
 		$(this).css('marginTop',($(this).parent().next('.prod_de').outerHeight() - $(this).height())/2);
 	});
 	
+	$( ".main_div > li" ).on("mouseenter", function() {
+		$(this).find('.over').show();
+		$(this).find('.ty2 h1').stop(true,true).fadeIn();
+	});
+	$( ".main_div > li" ).on("mouseleave", function() {
+		$(this).find('.over').hide();
+		$(this).find('.ty2 h1').stop(true,true).fadeOut();
+	});
+	
 	
 });
 //input placeholder onblur="onBlur(this)" onfocus="onFocus(this)"
